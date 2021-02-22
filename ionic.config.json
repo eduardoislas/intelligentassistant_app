@@ -1,0 +1,7 @@
+{
+  "name": "alzheimerApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

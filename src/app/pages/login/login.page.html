@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content">
+
+
+  <img src="assets/POTRO.jpg" class="centrar">
+
+  <div class="ion-text-center" >
+    <div class="margenesLogin">
+  <ion-label class="tamañoLabel" >Bienvenido</ion-label>
+    </div>
+  </div>
+ 
+ 
+  <!--textArea para ingresar el correo y la contraseña-->
+  <div class="ion-text-center">
+  <!-- <div class="margenesLogin">
+  <ion-textarea  >Ingrese Correo</ion-textarea>
+  <ion-textarea padding >Contraseña</ion-textarea> 
+   </div> -->
+
+   <div class="margenesLogin">
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    </div>
+    <!-- Textarea in an item with a floating label -->
+    <div  class="margenesLogin">
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+    </div>
+   
+  </div>
+  
+  
+  <!--Butonos de iniciar sesión y registrarse para ingresar o crear una cuenta-->
+  <div class="botonesMargenes">
+  <ion-button color="primary" expand="full" shape="round" size="small" routerLink="/inicio">
+      Iniciar sesión
+  </ion-button>
+  
+  <ion-button color="primary" expand="full" shape="round" routerLink="/registrarse" size="small">
+      Registrarse
+  </ion-button>
+  
+  <ion-button color="danger" expand="full" shape="round" size="small">
+    Iniciar con Gmail
+</ion-button>
+  </div>
+  
+
+</ion-content>
