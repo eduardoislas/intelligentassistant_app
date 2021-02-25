@@ -26,23 +26,22 @@
    <div class="margenesLogin">
     <ion-item>
       <ion-label position="floating">Correo</ion-label>
-      <ion-textarea></ion-textarea>
+     <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
     </ion-item>
     </div>
     <!-- Textarea in an item with a floating label -->
     <div  class="margenesLogin">
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-textarea></ion-textarea>
+     <ion-input type="password"  [(ngModel)]="pass" name="password"></ion-input>
     </ion-item>
     </div>
    
   </div>
-  
-  
+
   <!--Butonos de iniciar sesión y registrarse para ingresar o crear una cuenta-->
   <div class="botonesMargenes">
-  <ion-button color="primary" expand="full" shape="round" size="small" routerLink="/inicio">
+  <ion-button (click)="onSubmitLogIn()" color="primary" expand="block" shape="round" size="small">
       Iniciar sesión
   </ion-button>
   
@@ -50,7 +49,7 @@
       Registrarse
   </ion-button>
   
-  <ion-button color="danger" expand="full" shape="round" size="small">
+  <ion-button (click)="loginGoogle() "color="danger" expand="full" shape="round" size="small">
     Iniciar con Gmail
 </ion-button>
   </div>
