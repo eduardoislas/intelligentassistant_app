@@ -1,3 +1,25 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Mi perfil</ion-item>
+        <ion-item>Muro</ion-item>
+        <ion-item>Estadisticas</ion-item>
+        <ion-item>Configuración</ion-item>
+        <ion-item>......</ion-item>
+        <ion-button color="primary" expand="full" shape="round"  class="botonesMargenes">Cerrar sesión</ion-button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
