@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-toolbar color ="primary">
+    <ion-title>
+      Comentarios
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="btn" (click)="verPost(post)">Comentar</ion-button>
+  <ion-button class="btn" ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+<ion-card class="post">
+
+  <ion-card-subtitle class="nombre">{{post.usuario.nombre}}</ion-card-subtitle>
+  
+  <ion-card-title class="title"><h5>{{post.title}}</h5></ion-card-title>
+
+  <ion-card-content class="description">{{post.description}}</ion-card-content>
+
+</ion-card>
+
+  <ion-refresher slot="fixed" (ionRefresh)="recargar($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+<app-comentario [comment]="comment"> </app-comentario>
+
+<ion-infinite-scroll [disabled]= "!scrollActived" threshold="100px" (ionInfinite)="ObtenerComentarios($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>
+

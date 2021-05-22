@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar>
+
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">Atras</ion-back-button>
+    </ion-buttons>
+
+
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+
+
+<ion-content class="ion-content">
+
+  <form (ngSubmit)="register(fRegister)" #fRegister="ngForm">
+    <!-- Textarea in an item with a floating label -->
+    <div class="margenesTXTLabel">
+      <ion-item>
+        <ion-input placeholder="Nombre completo" type="text" [(ngModel)]="registerUser.nombre" name="nombre">
+        </ion-input>
+      </ion-item>
+    </div>
+    <!-- Textarea in an item with a floating label -->
+    <div class="margenesTXTLabel">
+      <ion-item>
+
+        <ion-input placeholder="Correo Electronico" type="text" [(ngModel)]="registerUser.email" name="email">
+        </ion-input>
+      </ion-item>
+    </div>
+    <!-- Textarea in an item with a floating label -->
+    <div class="margenesTXTLabel">
+      <ion-item>
+
+        <ion-input placeholder="Contraseña" type="password" [(ngModel)]="registerUser.password" name="password"></ion-input>
+      </ion-item>
+    </div>
+
+
+    <ion-item class="margenesTXTLabel">
+
+      <ion-label>Fecha de nacimiento</ion-label>
+
+      <ion-item>
+        <ion-label>DD/MM/YYYY</ion-label>
+        <!-- <ion-input type="text" [(ngModel)]="registerUser.nacimiento" name="nacimiento"> -->
+          <ion-datetime displayFormat="DD/MM/YYYY" 
+          min="1920-01-01" max="2000-01-01"
+          type="text"
+          [(ngModel)]="registerUser.fechaNaci" name="fechaNaci"
+          
+          ></ion-datetime>
+        
+
+      </ion-item>
+
+    </ion-item>
+
+    <ion-item class="margenesTXTLabel">
+      <ion-label>Genero</ion-label>
+     
+        <ion-select type="text" [(ngModel)]="registerUser.genero" name="genero" placeholder="Selecciona">
+
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Femenino">Femenino</ion-select-option>
+          
+
+        </ion-select>
+     
+    </ion-item>
+
+
+    <ion-item class="margenesTXTLabel">
+      <ion-label>Tiempo de cuidador</ion-label>
+     
+        <ion-select type="text" [(ngModel)]="registerUser.tiempoCuidado" name="tiempoCuidado" placeholder="Selecciona">
+
+          <ion-select-option value="Menos de 1 año">Menos de 1 año</ion-select-option>
+          <ion-select-option value="1 a 3 años">1 a 3 años</ion-select-option>
+          <ion-select-option value="Más de 3 años">Más de 3 años</ion-select-option>
+
+        </ion-select>
+      
+    </ion-item>
+
+    <ion-item class="margenesTXTLabel">
+      <ion-label>La persona cuidada es mi:</ion-label>
+      
+        <ion-select type="text" [(ngModel)]="registerUser.relacion" name="relacion" placeholder="Selecciona">
+          <ion-select-option value="Pareja">Pareja</ion-select-option>
+          <ion-select-option value="Papá/Mamá">Papá/Mamá</ion-select-option>
+          <ion-select-option value="Abuelo(a)">Abuelo(a)</ion-select-option>
+          <ion-select-option value="Otro familiar">Otro familiar</ion-select-option>
+          <ion-select-option value="Amigo(a)">Amigo(a)</ion-select-option>
+        </ion-select>
+     
+    </ion-item>
+    <div class="botonesMargenes">
+
+
+      <ion-button color="primary" expand="full" shape="round" size="small" class="margenBotonRegistrar" type="submit"
+        color="tertiary" shape="round">
+        Crear usuario
+      </ion-button>
+    </div>
+  </form>
+
+
+
+
+  <!-- <div class="botonesMargenes">
+    <ion-button color="primary" expand="full" shape="round" size="small" class="margenBotonRegistrar"
+      (click)="onSubmitSignUp()">Registrar</ion-button>
+  </div> -->
+</ion-content>

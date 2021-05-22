@@ -1,0 +1,32 @@
+[{
+    "icon": "thumbs-up",
+    "name": "Favoritos",
+    "redirectTo": "tabs/favorites"
+},
+{
+    "icon": "contract",
+    "name": "Servicios",
+    "redirectTo": "tabs/services"
+},
+{
+    "icon": "mail",
+    "name": "Contactos",
+    "redirectTo": "tabs/contactos"
+},
+{
+    "icon": "chatbubbles-outline",
+    "name": "Sala de Chat",
+    "redirectTo": "tabs/chatroom"
+},
+{
+    "icon": "options",
+    "name": "Indicadores",
+    "redirectTo": "indicators"
+},
+{
+    "icon": "person",
+    "name": "Perfil del cuidador",
+    "redirectTo": "tabs/profile"
+}
+
+]

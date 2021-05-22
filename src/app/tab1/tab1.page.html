@@ -1,0 +1,19 @@
+<app-header titulo="Publicaciones"></app-header>
+
+<app-cuadropublicacion></app-cuadropublicacion>
+
+<ion-content>
+
+ 
+  <ion-refresher slot="fixed" (ionRefresh)="recargar($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+<app-posts [post]="post"> </app-posts>
+
+<ion-infinite-scroll [disabled]= "!scrollActived" threshold="100px" (ionInfinite)="siguientes($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "alzaid2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

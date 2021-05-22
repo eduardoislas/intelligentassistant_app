@@ -1,0 +1,120 @@
+<script src="https://apis.google.com/js/platform.js"></script>
+  <meta name="google-signin-client_id" content="714892732929-p4ggm5cfdvd8ss219cq5kg6r6uc1cpk3.apps.googleusercontent.com">
+
+<ion-content class="ion-content">
+  
+  <ion-img src="assets/Alzaid_logo.png" class="centrar"  ></ion-img>
+
+  <ion-slides class="mainSlide">
+    
+    
+    <ion-slide>
+
+      <form (ngSubmit)="login(fLogin)" #fLogin="ngForm">
+        <ion-grid fixed>
+
+          <ion-row>
+          </ion-row>
+        
+          <ion-row>
+            <ion-col>
+              
+                <ion-list class ="margenesLogin">
+
+                  
+                  
+                  <ion-item>
+                    <ion-label>Email</ion-label>
+                    <ion-input name="email"
+                                type="email"
+                                [(ngModel)]="loginUser.email"
+                                required></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label>Password</ion-label>
+                    <ion-input name="password"
+                                type="password"
+                                [(ngModel)]="loginUser.password"
+                                required></ion-input>
+                  </ion-item>
+
+                </ion-list>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-button type="submit"
+                          color="tertiary"
+                          shape="round">
+                Login
+              </ion-button>
+
+              <div class="centrar">
+                <div>
+                  <button type="button" id="btnGoogle" class="Google">
+          
+                    <img width="50px" 
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  
+                     </button>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </form>
+    
+      
+
+
+    </ion-slide>
+
+
+  </ion-slides>
+
+  <div >
+    
+    <!-- <ion-buttons>
+      <ion-button id="btnGoogle">
+        <ion-icon name="logo-google" ></ion-icon>
+
+      </ion-button>
+
+    </ion-buttons> -->
+
+    
+    
+  
+  </div>
+
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+  
+
+</ion-content>
+
+
+
+  <ion-toolbar class="ion-content">
+    
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="registrar2()"
+        shape="round"
+                    expand="full"
+                    size="small"
+                    
+                    color="primary">
+          Registrarme
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+
+
+  </ion-toolbar>
+

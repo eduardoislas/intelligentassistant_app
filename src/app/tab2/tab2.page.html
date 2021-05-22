@@ -1,0 +1,16 @@
+<app-header titulo="Favoritos"></app-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="recargar($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+<app-favorites [favorite]="favorite"> </app-favorites>
+
+<ion-infinite-scroll [disabled]= "!scrollActived" threshold="100px" (ionInfinite)="siguientes($event)">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

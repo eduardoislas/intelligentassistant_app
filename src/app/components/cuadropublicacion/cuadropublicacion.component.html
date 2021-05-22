@@ -1,0 +1,20 @@
+<ion-card color="primary">
+
+
+  
+  <ion-card-header>
+    <ion-label class="label"> Crear Publicacion </ion-label>
+    <ion-icon class="arrow" name="arrow-forward-outline" (click)="crearPoost()"></ion-icon>
+  </ion-card-header>
+
+  <ion-card-content class="input">
+    <ion-input placeholder="Titulo" name="title" type="title" [(ngModel)]="poost.title">
+    </ion-input>
+  </ion-card-content>
+
+  <ion-card-content class="input">
+    <ion-input placeholder="Algo que quieras compartir?" name="description" type="description"
+      [(ngModel)]="poost.description"></ion-input>
+  </ion-card-content>
+
+</ion-card>

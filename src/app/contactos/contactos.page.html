@@ -1,0 +1,28 @@
+<app-header titulo="Contactos">
+
+    
+</app-header>
+
+
+
+<ion-content>
+    <ion-searchbar (ionChange)="buscar($event)"></ion-searchbar>
+    
+
+   <ion-list>
+      
+       <ion-item (click)="verUsuarioPerfil(usuario)" *ngFor="let usuario of usuarios|filtro:textoBuscar:'nombre'">
+        
+           <ion-label>
+               <h3>{{usuario.nombre}}</h3>
+               <p>
+                   {{usuario.email}}
+               </p>
+           </ion-label>
+        
+       </ion-item>
+   </ion-list>
+
+
+</ion-content>
+

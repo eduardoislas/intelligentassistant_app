@@ -1,0 +1,15 @@
+<ion-card class="favorite">
+    <ion-card-title class="title" >{{favorite.title}}</ion-card-title>
+
+    <ion-card-content class="description" >{{favorite.description}}</ion-card-content>
+  <ion-row>
+    <ion-item class="icon">
+      <ion-icon name="chatbubble-outline" (click)="verFavorite(favorite)">
+      </ion-icon>
+    </ion-item>
+    <ion-item class="icon">
+      <ion-icon name="trash-bin-outline" (click)="eliminarFavorite(favorite)"></ion-icon>
+    </ion-item>
+  </ion-row>
+  
+</ion-card>

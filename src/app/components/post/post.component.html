@@ -1,0 +1,26 @@
+<div>
+  <ion-card class="post" >
+    <ion-card-subtitle class="nombre"> {{post.usuario.nombre}} </ion-card-subtitle>
+    <ion-card-title class="title"><h5> {{post.title}} </h5></ion-card-title>
+    
+    
+    <ion-card-content class="description">{{post.description}}</ion-card-content>
+    <ion-row>
+      <ion-item class="icon">
+        <ion-icon name="star-outline" (click)="favoritoPost(post)"></ion-icon>
+      </ion-item>
+  
+      <ion-item class="icon">
+        <ion-icon  name="chatbubble-outline" (click)="verPost(post)">
+        </ion-icon>
+      </ion-item>
+  
+      <ion-item class="icon">
+        <ion-icon name="trash-bin-outline" (click)="eliminarPost(post)"></ion-icon>
+      </ion-item>
+      
+    </ion-row>
+    
+  </ion-card>
+</div>
+

@@ -1,0 +1,30 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Comentar
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="comentarFavorite(favorite,comment)"
+              class="btn" >
+              Comentar
+  </ion-button>
+  <ion-buttons end>
+    <ion-button class="btn" ion-button (click)="closeModal()">Close</ion-button>
+    </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+<ion-item>
+  <ion-label>
+    <h1>{{favorite.title}}</h1>
+  </ion-label>
+</ion-item>
+<ion-item class="post">
+  <ion-label position="floating">Description</ion-label>
+  <ion-input name="description" type="description" [(ngModel)]="comment.description"></ion-input>
+</ion-item>
+</ion-content>

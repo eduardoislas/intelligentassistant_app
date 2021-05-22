@@ -1,0 +1,132 @@
+<app-header titulo="Perfil del cuidador"></app-header>
+
+
+
+<ion-content class="speaker-detail">
+
+    <div class="speaker-background">
+        <img src="../../../assets/avatars/av-1.png" alt="Usuario">
+        <h2>Usuario</h2>
+    </div>
+
+
+    <ion-toolbar>
+        <ion-item>
+            <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary">
+                <ion-segment-button value="1">
+                    <ion-label>Generales</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="2">
+                    <ion-label>Evolución</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-item>
+
+    </ion-toolbar>
+
+    <form (ngSubmit)="update(fUpdate)" #fUpdate="ngForm">
+
+        <div class="contenido" *ngIf="segment">
+            <ion-list>
+                <ion-item class="items">
+                    <ion-input placeholder="Nombre completo" type="text" [(ngModel)]="updatedUser.nombre" name="nombre" value="{{usuario.nombre}}">
+                    </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label type="email">{{usuario.email}}</ion-label>
+                </ion-item>
+                <!-- <ion-item>
+                <ion-input>********</ion-input>
+            </ion-item> -->
+
+
+            
+                <ion-item class="items">
+                    
+                    <ion-label>Genero</ion-label>
+                    <ion-select value="{{usuario.genero}}" type="text" [(ngModel)]="updatedUser.genero"
+                    name="genero" placeholder="Selecciona">
+                        <ion-select-option value="Femenino">Femenino</ion-select-option>
+                        <ion-select-option value="Masculino">Masculino</ion-select-option>
+                    </ion-select>
+                    
+                </ion-item>
+            
+
+                <ion-item class="items">
+
+                    <ion-label position="floating">Fecha de Nacimiento</ion-label>
+                    <ion-datetime displayFormat="DD/MM/YYYY" min="1920-01-01" max="2000-01-01" type="text"
+                        [(ngModel)]="updatedUser.fechaNaci" name="fechaNaci" value="{{usuario.fechaNaci}}"></ion-datetime>
+                </ion-item>
+                <!-- <ion-item>
+                <ion-label>Cuidador principal</ion-label>
+                <ion-select placeholder="Selecciona">
+                    <ion-select-option value="true">Si</ion-select-option>
+                    <ion-select-option value="false">No</ion-select-option>
+                </ion-select>
+            </ion-item> -->
+                <ion-item class="items">
+                    <ion-label>Tiempo de cuidador</ion-label>
+                    <ion-select value="{{usuario.tiempoCuidado}}" type="text" [(ngModel)]="updatedUser.tiempoCuidado"
+                        name="tiempoCuidado" placeholder="Selecciona">
+                        <ion-select-option value="Menos de 1 año">Menos de 1 año</ion-select-option>
+                        <ion-select-option value="1 a 3 años">1 a 3 años</ion-select-option>
+                        <ion-select-option value="Más de 3 años">Más de 3 años</ion-select-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item class="items">
+                    <ion-label>La persona cuidada es mi:</ion-label>
+                    <ion-select value="{{usuario.relacion}}" type="text" [(ngModel)]="updatedUser.relacion"
+                        name="relacion" placeholder="Selecciona" placeholder="Selecciona">
+                        <ion-select-option value="Pareja">Pareja</ion-select-option>
+                        <ion-select-option value="Papá/Mamá">Papá/Mamá</ion-select-option>
+                        <ion-select-option value="Abuelo(a)">Abuelo(a)</ion-select-option>
+                        <ion-select-option value="Otro familiar">Otro familiar</ion-select-option>
+                        <ion-select-option value="Amigo(a)">Amigo(a)</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-button color="primary" expand="full" shape="round" size="small" class="margenBotonRegistrar"
+                        type="submit" color="tertiary" shape="round">
+                        Actualizar usuario
+                    </ion-button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </form>
+
+    <div class="contenido" *ngIf="!segment">
+        <ion-list-header color="light"></ion-list-header>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Sobrecarga:</ion-card-subtitle>
+                <ion-card-title>Leve</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/sobrecarga.png">
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Ansiedad:</ion-card-subtitle>
+                <ion-card-title>Moderada</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/ansiedad.png">
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Depresión:</ion-card-subtitle>
+                <ion-card-title>Moderada</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/depresion.png">
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+
+</ion-content>

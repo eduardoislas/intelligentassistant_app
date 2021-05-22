@@ -1,0 +1,43 @@
+<app-header titulo="Detalle de servicios"></app-header>
+
+<ion-content>
+    <ion-content fullscreen="true">
+        <ion-header collapse="condense">
+            <ion-toolbar>
+                <ion-title size="large">Servicios</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-grid fixed>
+            <ion-row>
+                <ion-col size="12" size-md="6" *ngFor="let s of services">
+                    <ion-card class="speaker-card">
+                        <ion-card-header>
+                            <ion-item detail="false" lines="none" class="speaker-item">
+                                <ion-avatar slot="start">
+                                    <img [src]="s.picture" [alt]="s.name + ' profile picture'">
+                                </ion-avatar>
+                                <ion-label>
+                                    <h2>{{s.name}}</h2>
+                                    <h3><strong>{{s.specialty}}</strong></h3>
+                                </ion-label>
+                            </ion-item>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <ion-list lines="none">
+                                <ion-item detail="false">
+                                    <ion-label>
+                                        <h3>{{s.address}}</h3>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-list>
+                            <ion-button (click)="callNow('6441293289')"   color="primary" shape="round" size="small">
+                                <ion-icon name="call"></ion-icon>
+                            </ion-button>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
